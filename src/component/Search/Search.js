@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { searchingPosts } from '../../GraphQL/SearchQuerie';
-import { CgClose } from "@react-icons/all-files/Cg/CgClose";
-
+import { CgClose } from 'react-icons/cg';
 import Link from 'next/link';
 
 const Search = (props) => {

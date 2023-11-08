@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { GetCategories } from "@/GraphQL/queries";
 import { useState, useEffect, useRef } from "react";
-import { CgMenuMotion } from "@react-icons/all-files/Cg/CgMenuMotion";
-import { CgClose } from "@react-icons/Cg/CgClose";
+import { CgMenuMotion,CgClose } from 'react-icons/cg';
 import Search from "../Search/Search";
 import ButtomBar from "../Footer/ButtomBar";
 
@@ -106,7 +105,7 @@ export default function Navbar() {
       </nav>
       {open && (
         <div className={`absolute top-0 w-full bg-slate-300 h-screen overflow-auto overscroll-auto flex-row justify-center items-center z-10`}>
-          <div className={`lg:flex-row w-full h-[93vh] rounded p-5 flex max-sm:flex-col md:flex-col flex-row-reverse lg:justify-start max-md:flex-col lg:space-x-2 bg-white text-black overflow-y-auto overscroll-y-auto`}>
+          <div className={`lg:flex-row w-full h-full rounded p-5 flex max-sm:flex-col md:flex-col flex-row-reverse lg:justify-start max-md:flex-col lg:space-x-2 bg-white text-black overflow-y-auto overscroll-y-auto`}>
             <button onClick={closeMobileMenu} className="self-start max-md:self-end max-sm:order-1 md:self-end lg:order-2 lg:self-start max-sm:self-end">
               {open ? (
                 <CgClose className="stroke-1 text-xl text-black w-8 h-10" />
@@ -122,7 +121,7 @@ export default function Navbar() {
                 {categories.map((category) => (
                   <div key={category.id} className="relative mx-4 my-4">
                     <h1 className="text-[24px] text-gray-900 font-semibold">
-                      <button onClick={() => toggleCategory(category.id)}>
+                      <button className="text-[28px]"   onClick={() => toggleCategory(category.id)}>
                         {openCategory === category.id ? "-" : "+"}
                       </button>{" "}
                       <Link href={`/${category.attributes.CategorySlug}`} onClick={closeMobileMenu}>

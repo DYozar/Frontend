@@ -2,8 +2,7 @@ import React from 'react';
 import useCarousel from '@/component/Hooks/useCarousel';
 import Link from 'next/link';
 import Image from 'next/image';
-import { BsArrowLeft } from "@react-icons/all-files/Bs/BsArrowLeft";
-import { BsArrowRight } from "@react-icons/all-files/Bs/BsArrowRight";
+import { BsArrowLeft , BsArrowRight} from 'react-icons/bs';
 const Knowledge = ({ Posts }) => {
  
 
