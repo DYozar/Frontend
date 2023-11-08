@@ -10,7 +10,7 @@ import Search from "@/component/Search/Search";
 
 export default function Home({ categories, trending, limitedPosts ,featured ,fetchCourses }) {
   // Use useMemo to memoize the component rendering logic
-  const memoizedComponent = useMemo(() => {
+  
     return (
       <div className="">
         <main className="">
@@ -43,9 +43,7 @@ export default function Home({ categories, trending, limitedPosts ,featured ,fet
         </main>
       </div>
     );
-  }, [categories, trending, limitedPosts,]);
-
-  return memoizedComponent;
+  
 }
 
 export async function getStaticProps() {
@@ -99,6 +97,5 @@ export async function getStaticProps() {
       featured,
       fetchCourses
     },
-    revalidate:100
   };
 }
