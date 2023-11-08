@@ -63,7 +63,7 @@ const SubcategoryPage = ({ posts, error ,length , maxLength}) => {
           })}
         </div>
 
-        <div className="relative w-2/12 p-2">
+        <div className="relative   max-lg:hidden w-2/12 p-2">
           <div className="bg-white w-full h-full">
             <h1>content</h1>
           </div>
