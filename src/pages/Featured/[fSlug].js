@@ -38,67 +38,41 @@ return (
 
       <div className='subparent relative md:grid-cols-2  lg:w-10/12 h-full  grid max-sm:grid-cols-1  lg:grid-cols-6 lg:grid-rows-2  gap-x-6 gap-y-10 grid-flow-row-dense p-2'>
         {post.map((post, index) => {
-          // Check if the current post has Media with data
           const hasMediaWithData = post.Media && post.Media.data.length > 0;
-
           let content;
+
           if (index === 4) {
             content = <div>Premium advertising</div>;
           } else {
-            content = <PostCard key={post.id} post={post} className='' />;
+            content = <PostCard key={post.id} post={post} className="" />;
           }
 
+          const colSpanClass = (index) => {
+            if (index === 0 && hasMediaWithData) return "lg:col-span-6 md:col-span-2";
+            if (index === 1 && hasMediaWithData) return "lg:col-span-2";
+            if (index === 2 && hasMediaWithData) return "lg:col-span-2";
+            if (index === 3 && hasMediaWithData) return "lg:col-span-4";
+            if (index === 4) return "lg:col-span-2";
+            if (index > 4) {
+              if (index % 5 === 0 && hasMediaWithData) return "lg:col-span-2";
+              if (index % 5 === 1 || index % 5 === 4 && hasMediaWithData) return "lg:col-span-2";
+              if (index % 5 === 2 && hasMediaWithData) return "lg:col-span-2";
+              if (index % 5 === 3 && hasMediaWithData) return "lg:col-span-4";
+              if (!hasMediaWithData) return "lg:col-span-6";
+            }
+            return "lg:col-span-2";
+          };
+
           return (
-            <>
-              <div
-                key={index}
-                className={`sub sub break-words break-inside-avoid  lg:${
-                  index === 0 && hasMediaWithData
-                  ? ' lg:col-span-4 '
-                  : index === 1 && hasMediaWithData
-                  ? ' lg:col-span-2'
-                  : index === 2 && hasMediaWithData
-                  ? '  lg:col-span-2  '
-                  : index === 3 && hasMediaWithData
-                  ? ' lg:col-span-4'
-                  : (index === 4) 
-                  ? ' bg-red-300 lg:col-span-1'
-                  : index > 4 && index % 5 === 0 && hasMediaWithData 
-                  ? '  lg:col-span-3 '
-                  : index > 4 && index % 5 === 1 || index % 5 === 4 && hasMediaWithData
-                  ? '  lg:col-span-3  '
-                  : index > 4 && index % 5 === 2 && hasMediaWithData
-                  ? '  lg:col-span-4  '
-                  : index > 4  &&index % 5 === 3 && hasMediaWithData
-                  ? '  lg:col-span-2  '
-                  :  index > 4  && !hasMediaWithData 
-                  ? ' lg:col-span-6' :" lg:col-span-2"
-                } `}
-              >
-                {content}
-              </div>
-              
-              {index > 4 && (
-                hasMediaWithData && (index + 1) % 5 === 0? (
-                  <div key={`ad-${index}`} className="lg:col-span-2 lg:row-span-1 bg-green-700">
-                    <div>Advertising Post</div>
-                  </div>
-                ) : (
-                  !hasMediaWithData && (index + 1) % 6 === 0 ? (
-                    <div key={`ad-${index}`} className="lg:col-span-6 lg:row-span-1 bg-green-700">
-                      <div>Advertising Post</div>
-                    </div>
-                  ) : null
-                ) 
-              )}
-              
-            </>
+            <div key={index} className={`sub sub break-words break-inside-avoid ${colSpanClass(index)}`}>
+              {content}
+            </div>
           );
         })}
       </div>
 
 
-      <div className=' relative bg-red-700  w-2/12 p-2'>
+      <div className=' relative   w-2/12 p-2'>
         <div className='bg-white w-full h-full '>
           <h1>content</h1>
         </div>
@@ -109,7 +83,6 @@ return (
     
     
     <div>
-      <h1>{pageSize}</h1>
       {pageSize < length && maxLength && (<button onClick={loadMore}>Load More</button>)}
     </div>
   </div>

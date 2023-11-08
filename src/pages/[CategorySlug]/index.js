@@ -62,7 +62,7 @@ const CategoryPost = ({ posts, length, maxLength }) => {
           })}
         </div>
 
-        <div className="relative bg-red-700 w-2/12 p-2">
+        <div className="relative  w-2/12 p-2">
           <div className="bg-white w-full h-full">
             <h1>content</h1>
           </div>
@@ -70,7 +70,7 @@ const CategoryPost = ({ posts, length, maxLength }) => {
       </div>
 
       <div>
-        <h1>{pageSize}</h1>
+        
         {pageSize < length && maxLength && (<button onClick={loadMore}>Load More</button>)}
       </div>
     </div>
