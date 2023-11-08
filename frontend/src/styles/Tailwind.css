@@ -1,0 +1,195 @@
+.gradient-bg {
+  
+  background: linear-gradient(140deg ,#4FC3F7 , #DB41EF );
+}
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  color: transparent;
+  background-image: linear-gradient(100deg, #000000,#4FC3F7 , #9700DE,#DB41EF);
+}
+
+/* Custom CSS */
+/* Custom CSS or Tailwind CSS configuration */
+.bullet::before {
+  content: '•'; /* Use the bullet character as content */
+  display: inline-block;
+  font-size: 20px;
+  width: 1em; /* Adjust the spacing between the bullet and text */
+  margin: 0em 0em -1em; /* Negative margin to overlap with the previous text */
+  color: #333; /* Customize the bullet color if needed */
+}
+
+/* Add this CSS to your stylesheet or style tag in the HTML file */
+
+/* Remove scrollbar from elements with the .barscroll class */
+.barscroll::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar in Webkit browsers (e.g., Chrome, Safari) */
+}
+
+/* Hide the scrollbar in Firefox */
+.barscroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none; /* Hide the scrollbar in Internet Explorer/Edge */
+}
+
+/* styles/MasonryGrid.module.css */
+
+/* 
+
+styles/MasonryGrid.module.css
+
+.grids {
+  --gap: 1em;
+  --columns: 4;
+  max-width: 60rem;
+  margin: 0 auto;
+  display: column;
+  columns: var(--columns);
+  gap: var(--gap);
+}
+
+.grids > * {
+  break-inside: avoid;
+  margin-bottom: var(--gap);
+}
+
+@supports (grid-template-rows: masonry) {
+  .grids {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: masonry;
+    grid-auto-flow: dense;
+    /* align-tracks: stretch; 
+  }
+
+  .grid > * {
+    margin-bottom: 0em;
+  }
+}
+
+.featured {
+  grid-column: span 2;
+}
+
+:root {
+  --ff-primary: basic-sans, sans-serif;
+  --clr-primary: #ee6352;
+  --clr-body: #333;
+  --clr-bg: #ddd;
+  --spacer: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  margin: 3rem 0;
+  text-align: center;
+  font-size: clamp(2rem, 1rem + 3vw, 6rem);
+  font-weight: 300;
+  line-height: 1;
+  opacity: 0.2;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, var(--spacer));
+}
+
+body {
+  font-family: var(--ff-primary);
+  min-height: 100vh;
+  font-size: 1em;
+  line-height: 1.6;
+  color: var(--clr-body);
+  background: var(--clr-bg);
+  padding-bottom: 13rem;
+}
+
+a {
+  color: var(--clr-primary);
+}
+
+img {
+  max-width: 100%;
+}
+
+
+./* 
+title {
+  font-weight: 900;
+  color: var(--clr-primary);
+  line-height: 0.8;
+}
+
+
+
+.content {
+  padding: 2em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+.masonry{
+--gap: 1em;
+  --columns: 4;
+  max-width: 60rem;
+  margin: 0 auto;
+  display: column;
+  columns: var(--columns);
+  gap: var(--gap);
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: masonry;
+  grid-auto-flow: dense;
+
+}*/
+/* CSS for the container of PostCards (e.g., PostCardGrid) */
+.PostCardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the minmax value for column width */
+  gap: 20px; /* Adjust the gap between columns */
+}
+
+/* CSS for the first child of .subparent */
+.first-child{
+ 
+  column-span: all;
+}
+.lists-disc {
+  list-style-type: disc;
+}
+
+.dragabbleFalse {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+
+.col-span-2-5 {
+    grid-column: span 2.5;
+  }
+
+  /* markdown-styles.css */
+/* Define styles for headings */
+/* markdown-styles.css */
+
+.markdown > * {
+  all: revert;
+}
+/* Add more styles for other Markdown elements as needed */
