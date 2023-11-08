@@ -2,7 +2,7 @@ import Link from "next/link";
 import { GetCategories } from "@/GraphQL/queries";
 import { useState, useEffect, useRef } from "react";
 import { CgMenuMotion } from "@react-icons/all-files/Cg/CgMenuMotion";
-import { CgClose } from "@react-icons/all-files/Cg/CgClose";
+import { CgClose } from "@react-icons/Cg/CgClose";
 import Search from "../Search/Search";
 import ButtomBar from "../Footer/ButtomBar";
 
