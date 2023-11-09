@@ -74,7 +74,7 @@ export default function Navbar() {
             <Link href="/" className=" font-mono text-[24px]">insight medium</Link>
           </h2>
           <div className="flex items-center space-x-6">
-            <button onClick={closeMobileMenu} className="">
+            <button onClick={closeMobileMenu} title="NavButton" className="">
               {open ? (
                 <CgClose className="stroke-1 text-xl text-black w-8 h-10" />
               ) : (
@@ -87,7 +87,7 @@ export default function Navbar() {
       {open && (
         <div className={`absolute top-0 w-full bg-slate-300 h-screen overflow-auto overscroll-auto flex-row justify-center items-center z-10`}>
           <div className={`lg:flex-row w-full  rounded p-5 flex max-sm:flex-col md:flex-col flex-row-reverse lg:justify-start max-md:flex-col lg:space-x-2 bg-white text-black `}>
-            <button onClick={closeMobileMenu} className="self-start max-md:self-end max-sm:order-1 md:self-end lg:order-2 lg:self-start max-sm:self-end">
+            <button onClick={closeMobileMenu} title="NavButton" className="self-start max-md:self-end max-sm:order-1 md:self-end lg:order-2 lg:self-start max-sm:self-end">
               {open ? (
                 <CgClose className="stroke-1 text-xl text-black w-8 h-10" />
               ) : (
@@ -102,7 +102,7 @@ export default function Navbar() {
                 {categories.map((category) => (
                   <div key={category.id} className="relative mx-4 my-4">
                     <h1 className="text-[24px] text-gray-900 font-semibold">
-                      <button className="text-[28px]" onClick={() => toggleCategory(category.id)}>
+                      <button className="text-[28px]"  title="NavButton" onClick={() => toggleCategory(category.id)}>
                         {openCategory === category.id ? "-" : "+"}
                       </button>{" "}
                       <Link href={`/${category.attributes.CategorySlug}`} onClick={closeMobileMenu}>
