@@ -45,7 +45,7 @@ const Knowledge = ({ Posts }) => {
       {
         Posts.length < 3 ? null :
         <div className="space-x-3 text-center text-3xl text-gray-50">
-          <button ref={LeftRef} title="ScrollingButtons"  type='submit'  aria-label="button" className='bg-gray-900 p-3 rounded-3xl hover:animate-pulse    cursor-pointer transition duration-300  '>
+          <button ref={LeftRef} title="ScrollingButtons"  type='submit' aria-labelledby="labeldiv" className='bg-gray-900 p-3 rounded-3xl hover:animate-pulse    cursor-pointer transition duration-300  '>
             <BsArrowLeft className=' '/>
           </button>
           <button ref={RightRef} className='bg-gray-900 p-3 rounded-3xl hover:animate-pulse   cursor-pointer transition duration-300 '>
