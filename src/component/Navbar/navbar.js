@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { GetCategories } from "@/GraphQL/queries";
 import { useState, useEffect, useRef } from "react";
-import { CgMenuMotion,CgClose } from 'react-icons/cg';
+import { CgMenuMotion, CgClose } from 'react-icons/cg';
 import Search from "../Search/Search";
 import ButtomBar from "../Footer/ButtomBar";
 
@@ -13,11 +13,7 @@ export default function Navbar() {
   const ulRef = useRef(null);
 
   const toggleCategory = (categoryId) => {
-    if (openCategory === categoryId) {
-      setOpenCategory(null); // Close the clicked category if it's already open
-    } else {
-      setOpenCategory(categoryId); // Open the clicked category
-    };
+    setOpenCategory(openCategory === categoryId ? null : categoryId);
   };
 
   useEffect(() => {
@@ -78,21 +74,6 @@ export default function Navbar() {
             <Link href="/" className=" font-mono text-[24px]">insight medium</Link>
           </h2>
           <div className="flex items-center space-x-6">
-            {/** <ul className="space-x-6 hidden lg:flex md:flex" ref={ulRef}>
-              <li>
-                <Link href="/finance" className="hover:underline underline-offset-8">
-                  Newsletters
-                </Link>
-              </li>
-              <li>
-                <Link href="/Privacy-Policy" className="hover:underline underline-offset-8">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-            <button className="hidden sm:inline gradient-bg text-white hover:text-black hover:animate-pulse py-2 px-4 rounded-full cursor-pointer transition duration-300">
-              Subscribe
-            </button>*/}
             <button onClick={closeMobileMenu} className="">
               {open ? (
                 <CgClose className="stroke-1 text-xl text-black w-8 h-10" />
@@ -105,7 +86,7 @@ export default function Navbar() {
       </nav>
       {open && (
         <div className={`absolute top-0 w-full bg-slate-300 h-screen overflow-auto overscroll-auto flex-row justify-center items-center z-10`}>
-          <div className={`lg:flex-row w-full h-full rounded p-5 flex max-sm:flex-col md:flex-col flex-row-reverse lg:justify-start max-md:flex-col lg:space-x-2 bg-white text-black overflow-y-auto overscroll-y-auto`}>
+          <div className={`lg:flex-row w-full  rounded p-5 flex max-sm:flex-col md:flex-col flex-row-reverse lg:justify-start max-md:flex-col lg:space-x-2 bg-white text-black `}>
             <button onClick={closeMobileMenu} className="self-start max-md:self-end max-sm:order-1 md:self-end lg:order-2 lg:self-start max-sm:self-end">
               {open ? (
                 <CgClose className="stroke-1 text-xl text-black w-8 h-10" />
@@ -113,7 +94,7 @@ export default function Navbar() {
                 <CgMenuMotion className="stroke-1 text-xl w-8 h-10 c" />
               )}
             </button>
-            <div className="relative w-full lg:order-first max-sm:order-2 max-sm:h-fit lg:h-full max-md:w-full items-start max-sm:w-full md:w-full">
+            <div className="relative w-full  lg:order-first max-sm:order-2 max-sm:h-fit lg:h-full max-md:w-full items-start max-sm:w-full md:w-full">
               <div className="my-5">
                 <Search closeMobileMenu={closeMobileMenu} />
               </div>
@@ -121,7 +102,7 @@ export default function Navbar() {
                 {categories.map((category) => (
                   <div key={category.id} className="relative mx-4 my-4">
                     <h1 className="text-[24px] text-gray-900 font-semibold">
-                      <button className="text-[28px]"   onClick={() => toggleCategory(category.id)}>
+                      <button className="text-[28px]" onClick={() => toggleCategory(category.id)}>
                         {openCategory === category.id ? "-" : "+"}
                       </button>{" "}
                       <Link href={`/${category.attributes.CategorySlug}`} onClick={closeMobileMenu}>
@@ -152,6 +133,7 @@ export default function Navbar() {
                     )}
                   </div>
                 ))}
+                <div></div>
               </div>
               <div className="transition ease-in-out delay-150 max-sm:hidden lg:grid lg:grid-cols-3 justify-items-center">
                 {categories.map((category) => (
@@ -185,13 +167,7 @@ export default function Navbar() {
                 ))}
               </div>
             </div>
-            {/**<div className="w-1/4 max-sm:w-full max-md:w-full max-sm:order-3 bg-red-300 flex justify-center items-start">
-              <div className="max-sm:w-full text-[12px]">
-                <h1>content</h1>
-              </div>
-            </div>*/}
           </div>
-          <ButtomBar closeMobileMenu={closeMobileMenu}/>
         </div>
       )}
     </div>

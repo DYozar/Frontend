@@ -32,7 +32,7 @@ export const getPosts = async () => {
 export const GetCategories = async () => {
   const GET_ALL_CATEGORIES = gql`
     query{
-      categories{
+      categories(pagination: { pageSize:200}){
         data {
           id
           attributes {
