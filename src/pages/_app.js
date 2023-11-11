@@ -26,7 +26,8 @@ export default function App({ Component, pageProps }) {
         />
         {/* End Google Tag Manager code */}
         <meta name="p:domain_verify" content="71defa7e69311be4efaec119b7778f92"/>
-        <meta name="description" content="they told you money its important for your life i told you they are wrong information equal wealthy"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+        <meta name="description" content="they told you money its important for your life i told you they are wrong information equal wealthy"/>
         <title> A brief, clear, informative, and unique Content</title>
         
       </Head>

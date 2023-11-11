@@ -16,7 +16,7 @@ export const updateArticleViews = async (id, Views) => {
 `
 ;
 
-  const GRAPHQL_ENDPOINT = 'https://dashboard.insightmedium.blog/graphql';
+  const GRAPHQL_ENDPOINT = 'http://34.171.35.102/graphql';
 
   try {
     const response = await request(GRAPHQL_ENDPOINT, UPDATE_Views, {

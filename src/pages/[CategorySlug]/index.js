@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { GetCategoriesPosts, GetCategories } from '@/GraphQL/queries';
 import PostCard from '@/component/Postcard/postcard';
-
+import Error from '../404';
 
 const CategoryPost = ({ posts, length, maxLength }) => {
   if (!posts) {
-    return <h1>Not Found</h1>;
+    return <Error/>;
   }
   const [pageSize, setPageSize] = useState(20);
 
@@ -99,6 +99,7 @@ export async function getStaticProps({ params }) {
   }
   return {
     props: { posts, length , maxLength},
+    revalidate: 10,
   };
 }
 

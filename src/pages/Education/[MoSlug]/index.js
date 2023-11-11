@@ -3,11 +3,12 @@ import Card from '@/component/Postcard/card';
 import Error from 'next/error';
 import Link from 'next/link';
 import React from 'react';
+import Error from '@/pages/404';
 
 const ESlug = ({posts} ) => {
   if (!posts || posts.length === 0) {
     // No posts found, you can render a "No Posts Found" message here
-    return <h1>No Posts Found</h1>;
+    return <Error/>;
   }
   return (
     <div className='mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 space-y-5' >

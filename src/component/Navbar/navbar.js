@@ -3,7 +3,7 @@ import { GetCategories } from "@/GraphQL/queries";
 import { useState, useEffect, useRef } from "react";
 import { CgMenuMotion, CgClose } from 'react-icons/cg';
 import Search from "../Search/Search";
-import ButtomBar from "../Footer/ButtomBar";
+import Social from '../Sections/SocialMedia';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -168,7 +168,10 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <ButtomBar/>
+          <div className="my-6px">
+            <Social/>
+          </div>
+          
         </div>
       )}
     </div>

@@ -3,13 +3,15 @@
 import React, { useState } from 'react';
 import { GetSubCategoriesPosts } from '@/GraphQL/queries'; // Adjust the import based on your project structure
 import PostCard from '@/component/Postcard/postcard';
+import Error from '@/pages/404';
 
-const SubcategoryPage = ({ posts, error ,length , maxLength}) => {
+const SubcategoryPage = ({ posts ,length , maxLength}) => {
+  if (!posts) {
+    return <Error/> 
+  }
   const [pageSize, setPageSize] = useState(20);
 
-  if (!posts) {
-    return <h1>Not Found</h1>;
-  }
+  
 
   const loadMore = () => {
     setPageSize(prevPageSize => prevPageSize + 10);
@@ -85,7 +87,7 @@ export async function getServerSideProps({ params }) {
 
   const { CategorySlug, sSlug } = params;
 
-  try {
+  
     // Fetch subcategory posts by CategorySlug and sSlug
     const maxLength = 2100000000 
     const posts = await GetSubCategoriesPosts(sSlug, CategorySlug ,maxLength );
@@ -104,12 +106,5 @@ export async function getServerSideProps({ params }) {
     return {
       props: { posts, length , maxLength }
     };
-  } catch (error) {
-    console.error('Error fetching subcategory posts:', error.message); // Log the error message
-    return {
-      props: {
-        error: { message: 'An error occurred while fetching data.' },
-      },
-    };
-  }
+  
 }

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import {   getFeaturedPosts, GetFeaturedPosts } from '@/GraphQL/queries';
 import PostCard from '@/component/Postcard/postcard';
+import Error from '@/pages/404';
 
 const Featured = ({ posts , length , maxLength}) => {
   const [pageSize, setPageSize] = useState(20);
   if (!posts) {
     // Subcategory not found, you can render a "Not Found" page here
-    return <h1>Not Found</h1>;
+    return <Error/>;
   }
 
   const loadMore = () => {

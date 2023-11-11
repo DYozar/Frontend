@@ -2,8 +2,12 @@ import React from 'react';
 import PostCard from '@/component/Postcard/postcard';
 import Link from 'next/link';
 import { GetfuturedPost, getFeaturedPosts } from '@/GraphQL/queries';
+import Error from '@/pages/404';
 
  function DynamicSection({ Slug, Title, Posts }) {
+  if(!Posts){
+    return <Error/>
+  }
   return (
     <div className=''>
       <h2 className=" text-3xl ">

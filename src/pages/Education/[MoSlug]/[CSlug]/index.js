@@ -1,6 +1,7 @@
 
 import { GetChapterContent } from '@/GraphQL/EducativeQueries/eduData';
 import Link from 'next/link';
+import Error from '@/pages/404';
 
 const SubcategoryPage = ({posts , error}) => {
 
@@ -9,7 +10,7 @@ const SubcategoryPage = ({posts , error}) => {
   }
 
   if (!posts) {// Check if 'posts' is defined before filtering
-    return <h1>Not Found</h1>; // Subcategory not found or doesn't belong to the parent category
+    return <Error/>; // Subcategory not found or doesn't belong to the parent category
   }
 
 console.log(posts , "content")

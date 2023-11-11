@@ -3,10 +3,8 @@ import CategorySection from "@/component/Sections/Categorie'sSection";
 import Latest from "@/component/Sections/latest/index";
 import Featured from "@/component/Sections/Featured";
 import TrendingPosts from "@/component/Sections/TrendStories";
-import { useMemo } from "react";
 import Knowledge from "@/component/Sections/Courses";
 import { GetModulePosts } from "@/GraphQL/EducativeQueries/eduData";
-import Search from "@/component/Search/Search";
 
 export default function Home({ categories, trending, limitedPosts ,featured ,fetchCourses }) {
   // Use useMemo to memoize the component rendering logic
@@ -46,9 +44,12 @@ export default function Home({ categories, trending, limitedPosts ,featured ,fet
   
 }
 
-export async function getStaticProps() {
+export async function  getServerSideProps({res ,req}) {
   // Set Cache-Control headers
-
+  res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=10'
+  )
   // Fetch data from your GraphQL or API endpoints
   const limitedPosts = await getLatestPosts();
   const trending = await getTrendingPosts();
