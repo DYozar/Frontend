@@ -1,4 +1,4 @@
-import { GetContentBasedOnModules, GetModulePosts } from '@/GraphQL/EducativeQueries/eduData'
+import { GetContentBasedOnModules, GetModulePosts } from '@/GraphQL/eduData'
 import Card from '@/component/Postcard/card';
 import React from 'react';
 import Error from '@/pages/404';

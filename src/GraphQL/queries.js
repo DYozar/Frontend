@@ -2,7 +2,7 @@
 
 import { request, gql } from 'graphql-request';
 
-const GRAPHQL_ENDPOINT = 'http://34.171.35.102/graphql';
+const GRAPHQL_ENDPOINT = 'https://dashboard.insightmedium.blog/graphql';
 
 export const getPosts = async () => {
   const GET_ALL_SLUGS = gql`

@@ -9,7 +9,7 @@ import {
   Sitemap,
   TermsOfService,
   PrivacyPolicy
-} from '@/GraphQL/StaticPageQueries/StaticQueries';
+} from '@/GraphQL/StaticQueries';
 import Link from 'next/link';
 
 export default function index({matchedPage}) {

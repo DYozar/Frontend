@@ -4,7 +4,7 @@ import Latest from "@/component/Sections/latest/index";
 import Featured from "@/component/Sections/Featured";
 import TrendingPosts from "@/component/Sections/TrendStories";
 import Knowledge from "@/component/Sections/Courses";
-import { GetModulePosts } from "@/GraphQL/EducativeQueries/eduData";
+import { GetModulePosts } from "@/GraphQL/eduData";
 
 export default function Home({ categories, trending, limitedPosts ,featured ,fetchCourses }) {
   // Use useMemo to memoize the component rendering logic

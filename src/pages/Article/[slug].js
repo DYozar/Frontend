@@ -4,7 +4,7 @@ import PostCard from '@/component/Postcard/postcard';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import ArticleDetails from '@/component/Article Detail';
-import { GetModulePosts } from '@/GraphQL/EducativeQueries/eduData';
+import { GetModulePosts } from '@/GraphQL/eduData';
 
 export default function Slug({ posts, relatedPosts  }) {
 const relatedPostswithout = relatedPosts.filter(post => !post.Media || post.Media.data.length === 0 )

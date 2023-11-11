@@ -1,4 +1,4 @@
-import { GetContent, GetModulePosts } from '@/GraphQL/EducativeQueries/eduData';
+import { GetContent, GetModulePosts } from '@/GraphQL/eduData';
 import ArticleDetails from '@/component/Article Detail';
 import Image from 'next/image';
 import React from 'react'

@@ -1,6 +1,6 @@
 import { request, gql } from 'graphql-request';
 
-const GRAPHQL_ENDPOINT =  'http://34.171.35.102/graphql';
+const GRAPHQL_ENDPOINT =  'https://dashboard.insightmedium.blog/graphql';
 
 export const GetChapterContent = async (CSlug ,MoSlug) => {
     const GET_ALL_CHAPTER_POSTS = gql`

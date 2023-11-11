@@ -1,5 +1,5 @@
 
-import { GetChapterContent } from '@/GraphQL/EducativeQueries/eduData';
+import { GetChapterContent } from '@/GraphQL/eduData';
 import Link from 'next/link';
 import Error from '@/pages/404';
 

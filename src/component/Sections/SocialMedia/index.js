@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { FaXTwitter, FaInstagram, FaMeta, FaLinkedinIn, FaPinterestP, FaYoutube } from 'react-icons/fa6';
-import { Social } from './socialQuery';
+import { Social } from '../../../GraphQL/socialQuery';
 
 const Index = () => {
   const [SocialMedia, setSocial] = useState([]); // Initialize to an empty array
