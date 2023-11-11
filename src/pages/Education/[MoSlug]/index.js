@@ -1,7 +1,5 @@
 import { GetContentBasedOnModules, GetModulePosts } from '@/GraphQL/EducativeQueries/eduData'
 import Card from '@/component/Postcard/card';
-import Error from 'next/error';
-import Link from 'next/link';
 import React from 'react';
 import Error from '@/pages/404';
 
