@@ -82,7 +82,7 @@ export default CategoryPost;
 
 
 // Fetch data at server-side runtime
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const categorySlug = params.CategorySlug;
   const maxLength = 2100000000 
   // Fetch the posts data
@@ -99,7 +99,6 @@ export async function getStaticProps({ params }) {
   }
   return {
     props: { posts, length , maxLength},
-    revalidate: 10,
   };
 }
 
@@ -108,7 +107,7 @@ export async function getStaticProps({ params }) {
 
 // Specify dynamic routes to pre-render pages based on data.
 // The HTML is generated at build time and will be reused on each request.
-export async function getStaticPaths() {
+export async function getServerSidePaths() {
   const categories = await GetCategories();
 
   const paths = categories.map((category) => ({

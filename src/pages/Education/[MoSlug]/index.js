@@ -27,7 +27,7 @@ const ESlug = ({posts} ) => {
 export default ESlug;
 
 
-export async function getStaticProps({ params }){
+export async function getServerSideProps({ params }){
   const maxLength = 1000
   const MoSlug = params.MoSlug
   const posts = await GetContentBasedOnModules(MoSlug); // You can provide a default pageSize here

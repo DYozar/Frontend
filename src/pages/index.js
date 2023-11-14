@@ -8,7 +8,6 @@ import { GetModulePosts } from "@/GraphQL/eduData";
 
 export default function Home({ categories, trending, limitedPosts ,featured ,fetchCourses }) {
   // Use useMemo to memoize the component rendering logic
-  
     return (
       <div className="">
         <main className="">

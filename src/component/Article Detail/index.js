@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
 export default function ArticleDetails({ post }) {
   const firstCategory = post.categories[0]; // Display only the first category
@@ -20,7 +21,7 @@ export default function ArticleDetails({ post }) {
               </h2>
             </div>
           )}
-          {firstSubCategory ? <span className="text-l mx-4"> /</span> : <Link href={"/"}>Go back</Link>}
+          {firstSubCategory ? <span className="text-l mx-4"> /</span> : !firstCategory ? <Link href={"/"} className='mx-2'>Go back</Link>:null}
           {/* Sub Categories */}
           {firstSubCategory && (
             <div>
@@ -33,7 +34,7 @@ export default function ArticleDetails({ post }) {
           )}
         </div>
         {/* Title */}
-        <h1 className="text-[22px] sm:text-[24px] md:text-[26px] lg:text-[32px] xl:text-[34px] text-gray-900 font-bold mt-3">{post.Title}</h1>
+        <h1 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[30px] xl:text-[32px] text-gray-700 font-bold mt-3">{post.Title}</h1>
 
         {/* Media */}
         <div className="my-14">
@@ -56,7 +57,7 @@ export default function ArticleDetails({ post }) {
           {post.Highlight && post.Highlight.split('\n').map((highlight, index) => (
             <div className='inline-flex ' key={index}>
               <span className="bullet"/>
-              <p className="text-[17px] sm:text-[19px] lg:text-[22px] font-bold ">
+              <p className="text-[14px] sm:text-[16px] lg:text-[18px] font-bold ">
                 {highlight}
               </p>
             </div>
@@ -65,16 +66,18 @@ export default function ArticleDetails({ post }) {
 
         {/* Content */}
         <div className="mb-8">
-          <p className="text-gray-700 text-[13px] md:text-[16px]  text-justify indent-8 capitalize leading-8 whitespace-pre-line">{post.Content}</p>
+          <ReactMarkdown className="text-gray-700 text-[13px] md:text-[16px]  markdown text-justify indent-4 capitalize leading-8 ">
+            {post.Content}
+          </ReactMarkdown>
         </div>
       </div>
 
-
-      <div className='md:h-screen md:w-3/12 mx-8 my-14 sticky top-8 '>
-        <p className='m-4 text-justify'>
+{/** 
+      <div className='md:h-screen md:w-3/12 mx-10 my-16 py-10 sticky top-10 '>
+        <p className='m-4  text-justify'>
           Introducing the future of convenience and style! Our cutting-edge products are designed with you in mind, seamlessly blending innovation and elegance to enhance your everyday life. Whether you're looking to upgrade your home, streamline your daily routine, or simply indulge in a touch of luxury, our range has something for everyone. Experience the perfect fusion of form and function as our products elevate your lifestyle. Join the countless satisfied customers who have already discovered the difference. Don't miss out on the opportunity to revolutionize the way you live. Embrace the future – choose us for unparalleled quality and sophistication. Your life, upgraded.
         </p>
-      </div>
+      </div>*/}
     </div>
   );
 }

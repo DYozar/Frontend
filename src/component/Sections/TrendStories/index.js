@@ -16,7 +16,7 @@ export default function TrendingPosts({ posts }) {
       <div className="">
         {posts.length === 0 ?null : <h2 className="text-[26px]  text-gray-800 font-bold">Trending Posts</h2>}
         <ul className='list-decimal ml-4 min-w-[240px] '>
-          {postsWithImages.map((post) => (
+          {posts.map((post) => (
             <li className='text-gray-700 hover:underline underline-offset-4' key={post.id}>
               <Link href={`/Article/${post.attributes.slug}`} className=''>
                 <h1 className=' py-1 text-[16px] '>
