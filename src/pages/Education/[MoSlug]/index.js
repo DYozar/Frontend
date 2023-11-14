@@ -40,7 +40,7 @@ export async function getServerSideProps({ params }){
 
 }
 
-export async function getStaticPaths(){
+export async function getServerSidePaths(){
   const EducationPosts = await GetModulePosts()
   const paths = EducationPosts
   .filter((posts) => posts.MoSlug) // Filter out null MoSlug values
