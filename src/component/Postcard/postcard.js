@@ -26,12 +26,12 @@ export default function PostCard({ post }) {
             ))}
           </div>
         <div className='p-4'>
-          <h2 className='text-[22px] font-semibold  text-gray-800 hover:underline underline-offset-8'>
+          <h2 className='text-[18px] font-semibold  text-gray-800 hover:underline underline-offset-8'>
             <Link href={`/Article/${post.slug}`}>
               {post.Title}
             </Link>
           </h2>
-          <p className='text-[14px] text-gray-600 font-light mt-2 '>{post.Highlight}</p>
+          <p className='text-[13px] text-gray-600 font-light mt-2 '>{post.Highlight}</p>
         </div>
       </div>
     );
