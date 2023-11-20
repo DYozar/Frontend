@@ -18,13 +18,8 @@ export default function LatestPosts({ latestData }) {
           
           {latestData.map((post ,index) => {
             let content;
-            if (index === 3) {
-              content = <div className='bg-red-300 h-full w-full'>Premium advertising</div>;
-            } else {
-              content = 
-              
-                <PostCard  post={post.attributes} />
-            }
+              content = <PostCard  post={post.attributes} />
+            
             return (
               <div key={index} className={`  ${index === 0 ? 'xl:col-span-4 lg:col-span-4 md:col-span-3' : index === 1 ? 'xl:col-span-2  lg:col-span-2'  : index === 2 ? 'xl:col-span-2 lg:col-span-2': index > 4 ? 'xl:col-span-2 lg:col-span-2' : 'xl:col-span-2 lg:col-span-2'}`}>
                 {content}
