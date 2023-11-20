@@ -14,7 +14,7 @@ export default function LatestPosts({ latestData }) {
   return (
     <div className="mx-auto py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 ">
       
-        <ul className='grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-3 lg:grid-cols-6 lg:grid-rows-4 xl:grid-cols-6 xl:gap-x-8'>
+        <ul className='grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-3 lg:grid-cols-6  xl:grid-cols-6 xl:gap-x-8'>
           
           {latestData.map((post ,index) => {
             let content;
