@@ -34,7 +34,7 @@ const DynamicSection = ({ categorySlug, categoryTitle, categoryPosts }) => {
             content = <PostCard post={post} />;
             
             return (
-              <div key={index} className={` ${index === 0 ? 'xl:col-span-4' : index >= 1 ? 'xl:col-span-2' :'xl:col-span-2'}  `}>
+              <div key={index} className={` ${index === 0 ? 'lg:col-span-4' : index >= 1 ? 'lg:col-span-2' :'lg:col-span-2'}  `}>
                 {content}
               </div>
             );
