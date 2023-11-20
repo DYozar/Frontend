@@ -32,8 +32,8 @@ useEffect(() => {
       ))}
 
       
-      {relatedPosts.length > 0 ? <h1>Read Next</h1 >: null}
-      <div className=' my-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4'>
+      {relatedPosts.length > 0 ? <h1 className=' text-4xl'>What Next !</h1 >: null}
+      <div className=' mx-5 my-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4'>
         {relatedPosts.map((post) => (
           <div key={post.id} >
             <PostCard  post={post} />
