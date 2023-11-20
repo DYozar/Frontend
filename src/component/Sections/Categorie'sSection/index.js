@@ -30,11 +30,9 @@ const DynamicSection = ({ categorySlug, categoryTitle, categoryPosts }) => {
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8">
           {categoryPosts.map((post, index) => {
             let content;
-            if (index === 3) {
-              content = <div className="bg-red-300 h-full w-full">Premium advertising</div>;
-            } else {
-              content = <PostCard post={post} />;
-            }
+            
+            content = <PostCard post={post} />;
+            
             return (
               <div key={index} className={` ${index === 0 ? 'xl:col-span-3' : index === 1 ? 'xl:col-span-2' : index === 2 ? 'xl:col-span-2' : index === 4 ? 'xl:col-span-2' : 'xl:col-span-1'}  `}>
                 {content}
