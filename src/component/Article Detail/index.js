@@ -14,7 +14,7 @@ export default function ArticleDetails({ post }) {
         <div className=' text-[14px] flex my-2  text-magenta-shade/90 '>
           {firstCategory && (
             <div>
-              <h2 className='text-[16px]'>
+              <h2 className=''>
                 <Link href={`/${firstCategory?.CategorySlug}`} className=" hover:underline">
                   {firstCategory.Title}
                 </Link>
@@ -25,7 +25,7 @@ export default function ArticleDetails({ post }) {
           {/* Sub Categories */}
           {firstSubCategory && (
             <div>
-              <h2 className='text-[16px]'>
+              <h2 className=''>
                 <Link  href={`/[CategorySlug]/[sSlug]`} as={`/${firstCategory?.CategorySlug}/${firstSubCategory.sSlug}`} className=" hover:underline">
                   {firstSubCategory.Title}
                 </Link>
