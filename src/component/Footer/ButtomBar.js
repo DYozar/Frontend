@@ -56,6 +56,7 @@ const BottomBar = (props) => {
   return (
     <>
       <div className=' text-[12px] grid  grid-cols-1 sm:grid-cols-3 justify-items-start  lg:flex mx-4  mt-3 justify-center '>
+        
         {categories.map((category, index) => (
           <div key={index}>
             {category.attributes && category.attributes.Title ? (
@@ -66,7 +67,7 @@ const BottomBar = (props) => {
           </div>
         ))}
       </div>    
-      <Social/>
+      
     </>
     
   );

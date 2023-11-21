@@ -48,6 +48,7 @@ export default function ArticleDetails({ post }) {
                 className="rounded-lg w-full" /* Add w-full to make it full width */
                 priority= {true}
               />
+              <h6 className='text-[12px] font-thin text-gray-800 m-2 text-center'>{media.caption}</h6>
             </div>
           ))}
         </div>

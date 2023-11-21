@@ -427,6 +427,7 @@ export const getPostsDetail = async (slug) => {
               attributes {
                 url
                 name
+                caption
               }
             }
           }
@@ -466,6 +467,7 @@ export const getPostsDetail = async (slug) => {
       Media : article.attributes.Media.data.map((media)=>({
         url: media.attributes.url,
         name: media.attributes.name,
+        caption:media.attributes.caption
       })),
       categories: article.attributes.categories.data.map((category) => ({
         Title: category.attributes.Title,
