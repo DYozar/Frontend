@@ -55,12 +55,12 @@ const BottomBar = (props) => {
   // Render categories, checking if attributes exist
   return (
     <>
-      <div className=' text-[12px] grid  grid-cols-1 sm:grid-cols-3 justify-items-start  lg:flex mx-4  mt-3 justify-center '>
+      <div className=' text-[12px] grid  grid-cols-2 sm:grid-cols-3 justify-items-start  gap-4 lg:flex  mt-3 justify-center mx-auto '>
         
         {categories.map((category, index) => (
           <div key={index}>
             {category.attributes && category.attributes.Title ? (
-              <Link href="/Info/[Slug]" as={`/Info/${category.attributes.Slug}`} onClick={ () => handleLinkClick(props.closeMobileMenu)}><h1 className='hover:text-gray-700 hover:underline mx-2 underline-offset-2 '>{category.attributes.Title}</h1> </Link>
+              <Link href="/Info/[Slug]" as={`/Info/${category.attributes.Slug}`} onClick={ () => handleLinkClick(props.closeMobileMenu)}><h1 className=' hover:underline mx-2 underline-offset-2 '>{category.attributes.Title}</h1> </Link>
             ) : (
               <h1>No Title Available</h1>
             )}
