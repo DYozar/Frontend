@@ -54,16 +54,23 @@ export default function ArticleDetails({ post }) {
         </div>
 
         {/* Highlight */}
-        <div className='text-gray-800  w-fit space-y-6 my-14 ' >
-          {post.Highlight && post.Highlight.split('\n').map((highlight, index) => (
-            <div className='inline-flex ' key={index}>
-              <span className="bullet"/>
-              <p className="text-[14px] sm:text-[16px] lg:text-[18px] font-bold ">
-                {highlight}
-              </p>
-            </div>
-          ))}
+        <div className='text-gray-800 w-fit space-y-6 my-14'>
+          {post.Highlight && post.Highlight.split('\n').map((highlight, index) => {
+                const trimmedHighlight = highlight.trim(); // Remove leading and trailing whitespaces
+                if (trimmedHighlight) {
+                  return (
+                    <div className='inline-flex' key={index}>
+                      <span className="bullet" />
+                      <p className="text-[14px] sm:text-[16px] lg:text-[18px] font-bold">
+                        {trimmedHighlight}
+                      </p>
+                    </div>
+                  );
+                }
+                return null; // Don't render if only whitespace
+          })}
         </div>
+
 
         {/* Content */}
         <div className="mb-8">
