@@ -34,13 +34,8 @@ const SubcategoryPage = ({ posts ,length , maxLength}) => {
           {post.map((post, index) => {
             const hasMediaWithData = post.Media && post.Media.data.length > 0;
             let content;
-
-            if (index === 4) {
-              content = <div>Premium advertising</div>;
-            } else {
-              content = <PostCard key={post.id} post={post} className="" />;
-            }
-
+            content = <div>Premium advertising</div>;
+            
             const colSpanClass = (index) => {
               if (index === 0 && hasMediaWithData) return "lg:col-span-6 md:col-span-2";
               if (index === 1 && hasMediaWithData) return "lg:col-span-2";
