@@ -32,10 +32,13 @@ const SubcategoryPage = ({ posts ,length , maxLength}) => {
       <div className="relative lg:flex space-x-8 lg:w-11/12 h-full mx-auto px-4 py-16 sm:px:6 sm:py:24 lg:max-w-7xl lg:px:8">
         <div className="subparent relative md:grid-cols-2 lg:w-10/12 h-full grid max-sm:grid-cols-1 lg:grid-cols-6 lg:grid-rows-2 gap-x-6 gap-y-10 grid-flow-row-dense p-2">
           {post.map((post, index) => {
-            const hasMediaWithData = post.Media && post.Media.data.length > 0;
-            let content;
-            content = <div>Premium advertising</div>;
             
+            const hasMediaWithData = post.Media && post.Media.data.length > 0;
+
+            let content;           
+            content = <PostCard key={post.id} post={post} className="" />;
+            
+
             const colSpanClass = (index) => {
               if (index === 0 && hasMediaWithData) return "lg:col-span-6 md:col-span-2";
               if (index === 1 && hasMediaWithData) return "lg:col-span-2";
