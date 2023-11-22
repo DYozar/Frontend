@@ -74,7 +74,7 @@ export default function ArticleDetails({ post }) {
 
         {/* Content */}
         <div className="mb-8">
-          <ReactMarkdown className="text-gray-700 text-[13px] md:text-[16px]  markdown text-justify indent-4 capitalize leading-8 ">
+          <ReactMarkdown className="text-gray-700 text-[13px] md:text-[16px]  markdown text-justify  capitalize leading-8 ">
             {post.Content}
           </ReactMarkdown>
         </div>
