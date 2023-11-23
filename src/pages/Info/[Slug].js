@@ -21,13 +21,13 @@ export default function index({matchedPage}) {
 
 
   return (
-    <div className=" my-6 w-11/12 mx-auto">
+    <div className=" my-6 w-11/12 mx-auto h-screen">
       <h1>{matchedPage.attributes.Title}</h1>
       <ReactMarkdown className="markdown">{privacyPolicyContent}</ReactMarkdown>
     </div>
   )
 }
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const {Slug} = params
   const staticPages = [
     AboutUs,
@@ -51,7 +51,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getStaticPaths() {
+export async function getServerSidePaths() {
   const staticSlugs = [
     AboutUs,
     CategoryDirectory,

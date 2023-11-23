@@ -4,9 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import { CgMenuMotion, CgClose } from 'react-icons/cg';
 import Search from "../Search/Search";
 import Social from '../Sections/SocialMedia';
-
+import Image from "next/image";
+import Logo from '@/asset/logos.svg'
+import Logos from '@/asset/logo.svg'
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [logoSrc, setLogoSrc] = useState();
   const [categories, setCategories] = useState([]);
   const [openCategory, setOpenCategory] = useState(null);
   const navBarRef = useRef(null);
@@ -19,7 +22,19 @@ export default function Navbar() {
   useEffect(() => {
     const ulRefs = ulRef.current;
     const navRef = navBarRef.current;
+    
+  
+    const handleScrollLogo = () => {
+      if (window.scrollY > 100) {
+        setLogoSrc(Logos);
+      } else {
+        setLogoSrc(Logo);
+      }
+    };
 
+    window.addEventListener('scroll', handleScrollLogo);
+  
+    
     const handleScroll = () => {
       if (window.scrollY > 100) {
         navRef.classList.remove('bg-gray-50', 'text-gray-900');
@@ -34,6 +49,8 @@ export default function Navbar() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScrollLogo);
+
     };
   }, []);
 
@@ -70,8 +87,8 @@ export default function Navbar() {
     <div className="m-0 p-0 z-50 shadow-md sticky top-0" ref={navBarRef}>
       <nav className="py-2 px-6 md:py-3 transition duration-300">
         <div className="container mx-auto flex justify-between items-center">
-          <h2 className="text-[24px] md:text-3xl font-bold">
-            <Link href="/" className=" font-mono text-[24px]">insight medium</Link>
+          <h2 className="text-[24px] md:text-3xl font-bold" >
+            <Link href="/" className=" font-mono text-[24px]"> <Image src={logoSrc} alt='Picture of the author' priority= {true} as="image" width={500} height={100} className=" h-[50px] w-[250px]  " /></Link>
           </h2>
           <div className="flex items-center space-x-6">
             <button onClick={closeMobileMenu} title="NavButton" type='submit'  aria-labelledby="labeldiv"  className="">
