@@ -9,7 +9,7 @@ import Logo from '@/asset/logos.svg'
 import Logos from '@/asset/logo.svg'
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [logoSrc, setLogoSrc] = useState();
+  const [logoSrc, setLogoSrc] = useState(Logo);
   const [categories, setCategories] = useState([]);
   const [openCategory, setOpenCategory] = useState(null);
   const navBarRef = useRef(null);
