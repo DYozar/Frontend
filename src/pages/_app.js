@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
       {/* Insert the Google Tag Manager code here */}
       {/* Google Tag (gtag.js) */}
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-L8H31NEQ94"/>
-      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6994792846221170"crossorigin="anonymous"/>
+      
       <Script
         dangerouslySetInnerHTML={{
           __html: `
@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
         <meta name="description" content="they told you money its important for your life i told you they are wrong information equal wealthy"/>
         <title> A brief, clear, informative, and unique Content</title>
-        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6994792846221170"crossorigin="anonymous"></script>
       </Head>
       <Layout>
         <Component {...pageProps} />
