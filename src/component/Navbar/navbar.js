@@ -87,9 +87,9 @@ export default function Navbar() {
     <div className="m-0 p-0 z-50 shadow-md sticky top-0" ref={navBarRef}>
       <nav className="py-2 px-6 md:py-3 transition duration-300">
         <div className="container mx-auto flex justify-between items-center">
-          <h2 className="text-[24px] md:text-3xl font-bold" >
-            <Link href="/" className=" font-mono text-[24px]"> <Image src={logoSrc} alt='Picture of the author' priority= {true} as="image" width={500} height={100} className=" h-[50px] w-[250px]  " /></Link>
-          </h2>
+          <div className="text-[24px] md:text-3xl font-bold" >
+            <Link href="/" className=" font-mono text-[24px]"> <Image src={logoSrc} alt='Picture of the author' priority= {true} as="image" width={500} height={100} className=" h-[45px] w-[200px]  " /></Link>
+          </div>
           <div className="flex items-center space-x-6">
             <button onClick={closeMobileMenu} title="NavButton" type='submit'  aria-labelledby="labeldiv"  className="">
               {open ? (
