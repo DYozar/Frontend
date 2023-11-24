@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }) {
       {/* Insert the Google Tag Manager code here */}
       {/* Google Tag (gtag.js) */}
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-L8H31NEQ94"/>
+      <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6994792846221170"crossorigin="anonymous"/>
       <Script
         dangerouslySetInnerHTML={{
           __html: `

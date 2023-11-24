@@ -16,12 +16,12 @@ export default function index({matchedPage}) {
 
   
   
-  const privacyPolicyContent = matchedPage.attributes.content;
+  const privacyPolicyContent = matchedPage?.attributes.content;
 
 
 
   return (
-    <div className=" my-6 w-11/12 mx-auto h-screen">
+    <div className=" my-6 w-11/12 mx-auto min-h-screen">
       <h1>{matchedPage.attributes.Title}</h1>
       <ReactMarkdown className="markdown">{privacyPolicyContent}</ReactMarkdown>
     </div>
@@ -30,19 +30,19 @@ export default function index({matchedPage}) {
 export async function getServerSideProps({ params }) {
   const {Slug} = params
   const staticPages = [
-    AboutUs,
-    CategoryDirectory,
+   // AboutUs,
+    //CategoryDirectory,
     ContactUs,
-    ContentGuide,
-    FeedBack,
-    Resources,
-    Sitemap,
+    //ContentGuide,
+    //FeedBack,
+    //Resources,
+   // Sitemap,
     TermsOfService,
     PrivacyPolicy
   ];
 
   const staticPageData = await Promise.all(staticPages.map(page => page()));
-  const matchedPage = staticPageData.find(page => page.attributes?.Slug === Slug);
+  const matchedPage = staticPageData.find(page => page?.attributes?.Slug === Slug);
 
   return {
     props: {

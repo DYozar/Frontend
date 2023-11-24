@@ -17,13 +17,13 @@ const BottomBar = (props) => {
   // Define categories as a state variable
   const [categories, setCategories] = useState([]); // Initialize to an empty array
   const staticPages = [
-    AboutUs,
-    CategoryDirectory,
+    //AboutUs,
+    //CategoryDirectory,
     ContactUs,
-    ContentGuide,
-    FeedBack,
-    Resources,
-    Sitemap,
+    //ContentGuide,
+    //FeedBack,
+    //Resources,
+    //Sitemap,
     TermsOfService,
     PrivacyPolicy
   ];
@@ -59,11 +59,10 @@ const BottomBar = (props) => {
         
         {categories.map((category, index) => (
           <div key={index}>
-            {category.attributes && category.attributes.Title ? (
+            {category?.attributes && category?.attributes.Title ? 
               <Link href="/Info/[Slug]" as={`/Info/${category.attributes.Slug}`} onClick={ () => handleLinkClick(props.closeMobileMenu)}><h1 className=' hover:underline mx-2 underline-offset-2 '>{category.attributes.Title}</h1> </Link>
-            ) : (
-              <h1>No Title Available</h1>
-            )}
+             : ''
+            }
           </div>
         ))}
       </div>    
