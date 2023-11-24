@@ -312,7 +312,7 @@ export const GetSubCategoriesPosts = async (sSlug, CategorySlug , pageSize) => {
 export const GetCategoriesPost = async (categorySlug) => {
   const GET_ALL_CATEGORIES_POSTS = gql`
     query GetCategoriesPosts($CategorySlug: String!) {
-      articles(filters: { categories: { CategorySlug: { eq: $CategorySlug } } } ) {
+      articles(filters: { categories: { CategorySlug: { eq: $CategorySlug } } } pagination: { pageSize: 100 } ) {
         data {
           id
           attributes {
