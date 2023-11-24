@@ -361,7 +361,7 @@ export const GetCategoriesPost = async (categorySlug) => {
           CategorySlug: category.attributes.CategorySlug,
         })),
       }))
-      .slice(0, 10); // Limit to 5 posts
+      .slice(0, 11); // Limit to 5 posts
 
     return posts;
   } catch (error) {
