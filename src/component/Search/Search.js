@@ -60,7 +60,7 @@ const Search = (props) => {
       </div>
 
       {(searchQuery.trim() !== '' && searchResults.length > 0 )&& (
-        <div className="absolute z-50 top-[70px] p-4 bg-gray-900 text-gray-50 md:w-1/2 rounded-xl left-1/2 w-full md:left-1/2  -translate-x-1/2 flex flex-col gap-2">
+        <div className="absolute z-50 top-[70px] p-4 bg-gray-900 text-gray-50 md:w-1/2 rounded-xl left-1/2 w-full md:left-1/2  -translate-x-1/2 flex flex-col gap-4 overscroll-auto overflow-auto h-[400px] text-[15px] ">
           {searchResults.map((result) => (
             <span key={result.attributes.slug}><Link href={`/Article/${result.attributes.slug}`} className=' hover:underline underline-offset-4' onClick={ () => {props.closeMobileMenu() }}>{result.attributes.Title}</Link></span>
           ))}

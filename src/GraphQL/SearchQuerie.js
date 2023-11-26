@@ -45,7 +45,7 @@ export const searchingPosts = async () => {
   `;
   try {
     const result = await request(GRAPHQL_ENDPOINT, SEARCHING);
-    return result.articles.data;
+    return result.articles.data ;
   } catch (error) {
     console.error('Error fetching posts:', error);
     return [];
