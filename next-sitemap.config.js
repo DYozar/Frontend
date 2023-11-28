@@ -4,10 +4,10 @@ module.exports = {
     generateRobotsTxt: true,
     changefreq: 'daily',
     priority: 0.7,
-    exclude: ['/sitemap.xml'], // <= exclude here
+    exclude: ['//server-sitemap-index.xml'], // <= exclude here
     robotsTxtOptions: {
       additionalSitemaps: [
-        'https://insightmedium.blog/sitemap.xml', // <==== Add here
+        'https://insightmedium.blog/server-sitemap-index.xml', // <==== Add here
       ],
     },
   }
