@@ -7,4 +7,4 @@ Host: https://insightmedium.blog/
 
 # Sitemaps
 Sitemap: https://insightmedium.blog/sitemap.xml
-Sitemap: https://insightmedium.blog/server-sitemap-index.xml
+Sitemap: https://insightmedium.blog/server-sitemap.xml
