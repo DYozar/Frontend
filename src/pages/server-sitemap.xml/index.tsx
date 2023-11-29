@@ -1,6 +1,6 @@
 import { getServerSideSitemapLegacy } from 'next-sitemap'
 import { GetServerSideProps } from 'next'
-import {getPosts,GetCategories,GetSubCategories} from '@/GraphQL/queries'
+import {getPosts,GetCategories,GetSubCategories} from "../../GraphQL/queries"
 
 export  const getServerSideProps: GetServerSideProps = async (ctx) => {
   // Method to source urls from cms
