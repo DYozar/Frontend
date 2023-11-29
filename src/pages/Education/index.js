@@ -1,4 +1,4 @@
-import { GetModulePosts } from '@/GraphQL/eduData';
+import { GetModulePosts } from '../../GraphQL/eduData';
 import React, { useRef, useState } from 'react';
 import { FaCaretRight } from "@react-icons/all-files/fa/FaCaretRight";
 // Import Swiper React components

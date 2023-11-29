@@ -1,7 +1,7 @@
 
-import { GetChapterContent } from '@/GraphQL/eduData';
+import { GetChapterContent } from '../../../../GraphQL/eduData';
 import Link from 'next/link';
-import Error from '@/pages/404';
+import Error from '../../../../pages/404';
 
 const SubcategoryPage = ({posts , error}) => {
 

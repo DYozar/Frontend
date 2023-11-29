@@ -1,7 +1,7 @@
-import { GetContentBasedOnModules, GetModulePosts } from '@/GraphQL/eduData'
-import Card from '@/component/Postcard/card';
+import { GetContentBasedOnModules, GetModulePosts } from '../../../GraphQL/eduData'
+import Card from '../../../component/Postcard/card';
 import React from 'react';
-import Error from '@/pages/404';
+import Error from '../../../pages/404';
 
 const ESlug = ({posts} ) => {
   if (!posts || posts.length === 0) {
