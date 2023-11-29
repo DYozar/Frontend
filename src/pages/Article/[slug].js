@@ -27,11 +27,15 @@ useEffect(() => {
     <div className=''>
       
       <Head>
-        <title>{posts.Title}</title>
+        <title>{posts[0].Title}</title>
         <meta property="og:title" content={posts.Title} />
-        {posts.Media && posts.Media.map((media, index) => (
-          <meta property="og:image" content={media.url} key={index} />
-        ))}
+        {posts[0].Media && Array.isArray(posts[0].Media) && posts[0].Media.length > 0 && (
+          posts[0].Media.map((media, index) => 
+            {
+
+            return <meta property="og:image" content={media.url} key={index} />}
+          )
+        )}
       </Head>
 
 
