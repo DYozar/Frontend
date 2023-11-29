@@ -1,5 +1,5 @@
 import React from 'react';
-import useCarousel from '@/component/Hooks/useCarousel';
+import useCarousel from '../../Hooks/useCarousel';
 import Link from 'next/link';
 import Image from 'next/image';
 import { BsArrowLeft , BsArrowRight} from 'react-icons/bs';

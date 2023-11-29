@@ -1,4 +1,4 @@
-import { GetCategories } from "@/GraphQL/queries";
+import { GetCategories } from "../../GraphQL/queries";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";

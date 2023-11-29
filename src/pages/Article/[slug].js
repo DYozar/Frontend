@@ -1,10 +1,10 @@
-import { getPostsDetail, getPosts, getRelatedPosts } from '@/GraphQL/queries';
-import{updateArticleViews} from '@/GraphQL/mutation';
-import PostCard from '@/component/Postcard/postcard';
+import { getPostsDetail, getPosts, getRelatedPosts } from '../../GraphQL/queries';
+import{updateArticleViews} from '../../GraphQL/mutation';
+import PostCard from '../../component/Postcard/postcard';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import ArticleDetails from '@/component/Article Detail';
-import { GetModulePosts } from '@/GraphQL/eduData';
+import ArticleDetails from '../../component/Article Detail';
+import { GetModulePosts } from '../../GraphQL/eduData';
 import Head from 'next/head';
 
 export default function Slug({ posts, relatedPosts  }) {
@@ -27,12 +27,14 @@ useEffect(() => {
     <div className=''>
       
       <Head>
-          <title>{posts.Title}</title>
-          <meta property="og:title" content={posts.Title} />
-          {posts.Media.map((media, index) => (
-            <meta property="og:image" content={media.url} key={index} />
-          ))}
+        <title>{posts.Title}</title>
+        <meta property="og:title" content={posts.Title} />
+        {posts.Media && posts.Media.map((media, index) => (
+          <meta property="og:image" content={media.url} key={index} />
+        ))}
       </Head>
+
+
       
       {posts.map((post, index) => (
         <div key={index} className='  '>

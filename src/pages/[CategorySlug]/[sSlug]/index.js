@@ -1,9 +1,9 @@
 // pages/[CategorySlug]/[sSlug]/index.js
 
 import React, { useState } from 'react';
-import { GetSubCategoriesPosts } from '@/GraphQL/queries'; // Adjust the import based on your project structure
-import PostCard from '@/component/Postcard/postcard';
-import Error from '@/pages/404';
+import { GetSubCategoriesPosts } from '../../../GraphQL/queries'; // Adjust the import based on your project structure
+import PostCard from '../../../component/Postcard/postcard';
+import Error from '../../../pages/404';
 
 const SubcategoryPage = ({ posts ,length , maxLength}) => {
   if (!posts) {

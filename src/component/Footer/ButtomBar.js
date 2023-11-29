@@ -9,7 +9,7 @@ import {
   Sitemap,
   TermsOfService,
   PrivacyPolicy
-} from '@/GraphQL/StaticQueries';
+} from '../../GraphQL/StaticQueries';
 import Link from 'next/link';
 import Social from '../Sections/SocialMedia';
 

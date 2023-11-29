@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { GetCategories } from "@/GraphQL/queries";
+import { GetCategories } from "../../GraphQL/queries";
 import { useState, useEffect, useRef } from "react";
 import { CgMenuMotion, CgClose } from 'react-icons/cg';
 import Search from "../Search/Search";
 import Social from '../Sections/SocialMedia';
 import Image from "next/image";
-import Logo from '@/asset/logos.svg'
-import Logos from '@/asset/logo.svg'
+import Logo from '../../asset/logos.svg'
+import Logos from '../../asset/logo.svg'
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [logoSrc, setLogoSrc] = useState(Logo);

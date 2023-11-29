@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import PostCard from '@/component/Postcard/postcard';
+import PostCard from '../../../component/Postcard/postcard';
 import { FaCaretRight } from '@react-icons/all-files/fa/FaCaretRight';
 
 const DynamicSection = ({ categorySlug, categoryTitle, categoryPosts }) => {

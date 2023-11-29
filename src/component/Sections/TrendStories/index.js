@@ -1,5 +1,5 @@
 import React from 'react';
-import PostCard from '@/component/Postcard/postcard';
+import PostCard from '../../Postcard/postcard';
 import Link from 'next/link';
 
 export default function TrendingPosts({ posts }) {
