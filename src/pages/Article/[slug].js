@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import ArticleDetails from '@/component/Article Detail';
 import { GetModulePosts } from '@/GraphQL/eduData';
+import Head from 'next/head';
 
 export default function Slug({ posts, relatedPosts  }) {
   
