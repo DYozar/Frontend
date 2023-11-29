@@ -7,6 +7,7 @@ import ArticleDetails from '@/component/Article Detail';
 import { GetModulePosts } from '@/GraphQL/eduData';
 
 export default function Slug({ posts, relatedPosts  }) {
+  
 const relatedPostswithout = relatedPosts.filter(post => !post.Media || post.Media.data.length === 0 )
 const relatedPostswit  = relatedPosts.filter(post => post.Media && post.Media.data.length > 0 )
 
@@ -23,6 +24,14 @@ useEffect(() => {
     
   return (
     <div className=''>
+      
+      <Head>
+          <title>{posts.Title}</title>
+          <meta property="og:title" content={posts.Title} />
+          {posts.Media.map((media, index) => (
+            <meta property="og:image" content={media.url} key={index} />
+          ))}
+      </Head>
       
       {posts.map((post, index) => (
         <div key={index} className='  '>

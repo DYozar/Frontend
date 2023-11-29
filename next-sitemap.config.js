@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://insightmedium.blog/',
+    siteUrl: 'https://insightmedium.blog',
     generateRobotsTxt: true,
     changefreq: 'daily',
     priority: 0.7,
