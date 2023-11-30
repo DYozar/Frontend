@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import {   getFeaturedPosts, GetFeaturedPosts } from '@/GraphQL/queries';
-import PostCard from '@/component/Postcard/postcard';
-import Error from '@/pages/404';
+import {   getFeaturedPosts, GetFeaturedPosts } from '../../GraphQL/queries';
+import PostCard from '../../component/Postcard/postcard';
+import Error from '../../pages/404';
 
 const Featured = ({ posts , length , maxLength}) => {
   const [pageSize, setPageSize] = useState(20);
