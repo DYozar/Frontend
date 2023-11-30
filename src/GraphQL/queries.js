@@ -180,6 +180,14 @@ export const GetCategoriesPosts = async (categorySlug , pageSize) => {
                 attributes {
                   Title
                   CategorySlug
+                  Description
+                  Media{
+                    data{
+                      attributes{
+                        url
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -225,6 +233,7 @@ export const GetCategoriesPosts = async (categorySlug , pageSize) => {
       
       categories: article.attributes.categories.data.map((category) => ({
         Title: category.attributes.Title,
+        Description:category.attributes.Description,
         CategorySlug: category.attributes.CategorySlug,
       })),
     }));
@@ -279,6 +288,14 @@ export const GetSubCategoriesPosts = async (sSlug, CategorySlug , pageSize) => {
                 attributes {
                   Title
                   sSlug
+                  Description
+                  Media{
+                    data{
+                      attributes{
+                        url
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -319,6 +336,7 @@ export const GetSubCategoriesPosts = async (sSlug, CategorySlug , pageSize) => {
 
       sub_categories: article.attributes.sub_categories.data.map((category) => ({
         Title: category.attributes.Title,
+        Description:category.attributes.Description,
         sSlug: category.attributes.sSlug,
       })),
 
