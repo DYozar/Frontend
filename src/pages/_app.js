@@ -8,6 +8,7 @@ import SiteLogo from '../asset/sitelogo.png'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -37,6 +38,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </>
   )
