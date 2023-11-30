@@ -29,9 +29,10 @@ const CategoryPost = ({ posts, length, maxLength }) => {
     <div className="parent relative mt-4 h-full">
       
       <Head>
+        {console.log('test',posts[0].categories[0].Description )}
         <title>{posts[0].categories[0].Title}</title>
         <meta property="og:title" content={posts.Title} />
-        <meta property="og:description" content={posts[0].categories[0].Description} />
+        {/**<meta property="og:description" content={posts[0].categories.Description} /> */}
         {posts[0].Media.data && Array.isArray(posts[0].Media.data) && posts[0].Media.data.length > 0 && (
           posts[0].Media.data.map((media, index) => 
             {
