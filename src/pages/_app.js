@@ -10,7 +10,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 export default function App({ Component, pageProps }) {
-  console.log(SiteLogo)
   return (
     <> 
       {/* Insert the Google Tag Manager code here */}
