@@ -33,6 +33,7 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="they told you money its important for your life i told you they are wrong information equal wealthy"/>
         <title> A brief, clear, informative, and unique Content</title>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6994792846221170"crossorigin="anonymous"></script>
+        
       </Head>
       <Layout>
         <Component {...pageProps} />
