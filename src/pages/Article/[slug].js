@@ -35,11 +35,7 @@ useEffect(() => {
         <meta property="og:title" content={posts[0].Title} />
         <meta property="og:description" content={posts[0].Content} />
         <link rel="icon" href="favicon.ico" type="image/x-icon"></link>
-        {posts[0].Media && Array.isArray(posts[0].Media) && posts[0].Media.length > 0 && (
-          posts[0].Media.map((media, index) => 
-           ( <meta property="og:image" content={media[0].url} key={index} />)
-          )
-        )}
+        <meta property="og:image" content={posts[0].Media[0].url} />
       </Head>
 
 
