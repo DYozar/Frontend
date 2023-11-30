@@ -235,6 +235,7 @@ export const GetCategoriesPosts = async (categorySlug , pageSize) => {
         Title: category.attributes.Title,
         Description:category.attributes.Description,
         CategorySlug: category.attributes.CategorySlug,
+        Media: category.attributes.Media,
       })),
     }));
     console.log(posts.length)
@@ -338,6 +339,8 @@ export const GetSubCategoriesPosts = async (sSlug, CategorySlug , pageSize) => {
         Title: category.attributes.Title,
         Description:category.attributes.Description,
         sSlug: category.attributes.sSlug,
+        Media: category.attributes.Media,
+
       })),
 
       categories: article.attributes.categories.data.map((category) => ({
