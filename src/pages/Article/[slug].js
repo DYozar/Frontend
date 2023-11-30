@@ -34,14 +34,13 @@ useEffect(() => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={posts[0].Title} />
         <meta property="og:description" content={posts[0].Content} />
-        <link rel="icon" href="favicon.ico" type="image/x-icon"></link>
-        <meta property="og:image" content={posts[0].Media[0].url} />
+        <meta itemProp="image" content={posts[0].Media[0].url} />
       </Head>
 
 
       
       {posts.map((post, index) => (
-        <div key={index} className='  '>
+        <div key={index} className=''>
           
           <ArticleDetails post={post}/>
         </div>
