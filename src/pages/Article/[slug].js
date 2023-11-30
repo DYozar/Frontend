@@ -34,7 +34,7 @@ useEffect(() => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={posts[0].Title} />
         <meta property="og:description" content={posts[0].Content} />
-        <meta itemProp="image" content={posts[0].Media[0].url} />
+        <meta property="og:image" content={posts[0].Media[0].url} />
       </Head>
 
 
