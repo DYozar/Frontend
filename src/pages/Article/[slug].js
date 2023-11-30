@@ -30,16 +30,14 @@ useEffect(() => {
         <title>{posts[0].Title}</title>
         <meta charset="UTF-8"/>
         <meta name="keywords" content="financial markets, business strategies, global economy, market mastery, business brilliance, financial tips"/>
-        <meta property="og:type" content="website" />
         <meta name="author" content="InsightMedium"/>
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={posts[0].Title} />
         <meta property="og:description" content={posts[0].Content} />
         <link rel="icon" href="favicon.ico" type="image/x-icon"></link>
         {posts[0].Media && Array.isArray(posts[0].Media) && posts[0].Media.length > 0 && (
           posts[0].Media.map((media, index) => 
-            {
-
-            return <meta property="og:image" content={media.url} key={index} />}
+           ( <meta property="og:image" content={media[0].url} key={index} />)
           )
         )}
       </Head>
