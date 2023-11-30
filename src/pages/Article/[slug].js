@@ -37,8 +37,8 @@ useEffect(() => {
         <meta property="og:image" content={posts[0].Media[0].url} />
         <meta property="og:image:secure_url" content={posts[0].Media[0].url} />
         <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:width" content="1800"/>
-        <meta property="og:image:height" content="900"/>
+        <meta property="og:image:width" content="2240"/>
+        <meta property="og:image:height" content="1260"/>
       </Head>
 
 
