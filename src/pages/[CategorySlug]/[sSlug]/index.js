@@ -31,8 +31,8 @@ const SubcategoryPage = ({ posts ,length , maxLength}) => {
   return (
     <div className="parent relative mt-4 h-full">
       <Head>
-        <title>{posts[0].Title}</title>
-        <meta property="og:title" content={posts[0].Title} />
+        <title>{posts[0].sub_categories[0].Title}</title>
+        <meta property="og:title" content={posts[0].sub_categories[0].Title} />
         <meta property="og:description" content={posts[0].Highlight} />
         {posts[0].Media.data && Array.isArray(posts[0].Media.data) && posts[0].Media.data.length > 0 && (
           posts[0].Media.data.map((media, index) => 
