@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { GetCategoriesPosts, GetCategories } from '@/GraphQL/queries';
-import PostCard from '@/component/Postcard/postcard';
+import { GetCategoriesPosts, GetCategories } from '../../GraphQL/queries';
+import PostCard from '../../component/Postcard/postcard';
 import Error from '../404';
 
 const CategoryPost = ({ posts, length, maxLength }) => {

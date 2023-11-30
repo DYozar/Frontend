@@ -5,7 +5,7 @@ import { FaCaretRight } from "@react-icons/all-files/fa/FaCaretRight";
 
 import Image from 'next/image';
 import Link from 'next/link';
-import useCarousel from '@/component/Hooks/useCarousel';
+import useCarousel from '../../component/Hooks/useCarousel';
 
 const index = ({posts}) => {
   
