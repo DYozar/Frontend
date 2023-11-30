@@ -29,6 +29,7 @@ useEffect(() => {
       <Head>
         <title>{posts[0].Title}</title>
         <meta property="og:title" content={posts.Title} />
+        <meta property="og:description" content={posts[0].Content} />
         {posts[0].Media && Array.isArray(posts[0].Media) && posts[0].Media.length > 0 && (
           posts[0].Media.map((media, index) => 
             {

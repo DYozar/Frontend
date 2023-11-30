@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { GetCategoriesPosts, GetCategories } from '../../GraphQL/queries';
 import PostCard from '../../component/Postcard/postcard';
 import Error from '../404';
+import Head from 'next/head';
 
 const CategoryPost = ({ posts, length, maxLength }) => {
   if (!posts) {
@@ -26,6 +27,20 @@ const CategoryPost = ({ posts, length, maxLength }) => {
 
   return (
     <div className="parent relative mt-4 h-full">
+      
+      <Head>
+        <title>{posts[0].Title}</title>
+        <meta property="og:title" content={posts[0].Title} />
+        <meta property="og:description" content={posts[0].Highlight} />
+        {posts[0].Media.data && Array.isArray(posts[0].Media.data) && posts[0].Media.data.length > 0 && (
+          posts[0].Media.data.map((media, index) => 
+            {
+
+            return <meta property="og:image" content={media.attributes.url} key={index} />}
+          )
+        )}
+      </Head>
+
       <div className="relative lg:flex space-x-8 lg:w-11/12 h-full mx-auto px-4 py-16 sm:px:6 sm:py:24 lg:max-w-7xl lg:px:8">
         <div className="subparent relative md:grid-cols-2 lg:w-10/12 h-full grid max-sm:grid-cols-1 lg:grid-cols-6  gap-x-6 gap-y-10 grid-flow-row-dense p-2">
           {post.map((post, index) => {
