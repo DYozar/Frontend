@@ -33,6 +33,7 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
         <meta name="description" content="Unlock the world of financial wisdom and business brilliance. Dive into market mastery, global economic stories, and insider insights. Stay empowered with our daily dose of savvy tips and curated stories. Explore the intersection of knowledge and success with our comprehensive media platform."/>
         <title> Navigate Success: Your Gateway to Market Mastery, Business Brilliance, and Global Economic Insights</title>
+        <a rel="me" href="https://flipboard.social/@theInsiighter">Mastodon</a>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6994792846221170"crossorigin="anonymous"></script>
         
       </Head>

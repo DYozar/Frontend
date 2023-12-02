@@ -34,7 +34,7 @@ export default function ArticleDetails({ post }) {
           )}
         </div>
         {/* Title */}
-        <h1 className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[30px] xl:text-[32px] text-gray-700 font-bold mt-3">{post.Title}</h1>
+        <h1 className="text-[17px] sm:text-[20px] md:text-[22px] lg:text-[26px] xl:text-[30px] text-gray-700 font-bold mt-3">{post.Title}</h1>
 
         {/* Media */}
         <div className="my-14">
@@ -74,7 +74,7 @@ export default function ArticleDetails({ post }) {
 
         {/* Content */}
         <div className="mb-8">
-          <ReactMarkdown className="text-gray-700 text-[13px] md:text-[16px]  markdown text-justify  capitalize leading-8 ">
+          <ReactMarkdown className="text-gray-700 text-[13px] md:text-[16px]  markdown text-left  capitalize leading-8 ">
             {post.Content}
           </ReactMarkdown>
         </div>
