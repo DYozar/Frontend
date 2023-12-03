@@ -92,13 +92,13 @@ export default function Navbar() {
             <Link href="/" className=" font-mono text-[24px]"> <Image src={logoSrc} alt='Picture of the author' priority= {true} as="image" width={500} height={100} className=" h-[45px] w-[200px]  " /></Link>
           </div>
           <div className="flex items-center space-x-6">
-            <button onClick={closeMobileMenu} title="NavButton" type='submit'  aria-labelledby="labeldiv"  className="">
+            
               {open ? (
-                <CgClose className="stroke-1 text-xl text-black w-8 h-10" />
+                <CgClose className="stroke-1 text-xl text-black w-8 h-10" onClick={closeMobileMenu} title="NavButton" type='submit'  aria-labelledby="labeldiv"/>
               ) : (
-                <CgMenuMotion className="stroke-1 text-xl w-8 h-10" />
+                <CgMenuMotion className="stroke-1 text-xl w-8 h-10" onClick={closeMobileMenu} title="NavButton" type='submit'  aria-labelledby="labeldiv" />
               )}
-            </button>
+            
           </div>
         </div>
       </nav>
