@@ -48,25 +48,25 @@ const shareOnFlipboard = () => {
   };
   return (
     <div  className='text-[30px] flex items-center my-2 '>
-      {open ? <button  className=' border-magenta-shade/90 text-magenta-shade/90 border-spacing-3 border-[1px] p-[1px] rounded-full ' onClick={ShareButton}><CgClose /></button> : <button  className='text-magenta-shade/90  border-magenta-shade/90 border-spacing-3 border-[1px] p-[1px]  rounded-full '  onClick={ShareButton}><CgShare/></button>}
+      {open ? <button  className='animate-pulse border-magenta-shade/90 text-magenta-shade/90 border-spacing-3 border-[1px] p-[1px] rounded-full ' onClick={ShareButton}><CgClose /></button> : <button  className= ' text-magenta-shade/90  border-magenta-shade/90 border-spacing-3 border-[1px] p-[1px]  rounded-full '  onClick={ShareButton}><CgShare/></button>}
 
       {open ? 
         (
           <div className='text-[26px]  flex justify-start mx-5 space-x-3 w-[50%] '>
             <button onClick={shareOnFacebook}>
-              <FaMeta   className=' text-metaColor  hover:transition duration-700 ease-in-out'/> 
+              <FaMeta   className=' text-metaColor hover:animate-ping'/> 
             </button>
             <button onClick={shareOnTwitter}>
-              <FaXTwitter  className='  hover:transition duration-700 ease-in-out'/> 
+              <FaXTwitter  className=' hover:animate-ping'/> 
             </button>
             <button onClick={shareOnPinterest}>
-              <FaPinterestP  className='bg-pincolor  text-white  rounded-full   p-[2px]  hover:transition duration-700 ease-in-out'/>
+              <FaPinterestP  className='bg-pincolor  text-white  rounded-full   p-[2px] hover:animate-ping'/>
             </button>
             <button onClick={shareOnLinkedIn}>
-              <FaLinkedinIn  className=' bg-blue-600  text-white rounded-sm p-[1px]   hover:transition duration-700 ease-in-out'/>
+              <FaLinkedinIn  className=' bg-blue-600  text-white rounded-sm p-[1px]  hover:animate-ping'/>
             </button>
             <button onClick={shareOnWhatsapp}>
-              <FaWhatsapp  className='text-WhatsColor    hover:transition duration-700 ease-in-out'/>
+              <FaWhatsapp  className='text-WhatsColor   hover:animate-ping'/>
             </button>
           </div>
         ) :null

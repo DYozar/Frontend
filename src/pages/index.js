@@ -8,11 +8,9 @@ import { GetModulePosts } from "../GraphQL/eduData";
 import SocialShareButtons from "../component/ShareButton/index"
 export default function Home({ categories, trending, limitedPosts ,featured ,fetchCourses }) {
   // Use useMemo to memoize the component rendering logic
-  const currentUrl = 'https://insightmedium.blog/'
     return (
       <div className="">
         <main className="">
-        <SocialShareButtons url={currentUrl} />
           <section className=" xl:flex space-x-10  w-[95%] mx-auto ">
             <div className="order-1 xl:w-10/12 mx-auto ">
               <div >
