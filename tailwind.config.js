@@ -36,6 +36,10 @@ module.exports = {
         ' dark-gray ':'#333',
         'blue-magenta':'#3a2fb1',
         'magenta-shade':'#4338ca',
+        'metaColor' :'#0080FB',
+        'pincolor':'#E60023',
+        'WhatsColor':'#00E576',
+        
       },
 
     },

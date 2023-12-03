@@ -28,6 +28,7 @@ export default function App({ Component, pageProps }) {
         }}
       /> 
       {/* End Google Tag Manager code */}
+      
       <Head>
         <meta name="p:domain_verify" content="71defa7e69311be4efaec119b7778f92"/>
         <meta name="p:domain_verify" content="71defa7e69311be4efaec119b7778f92"/>

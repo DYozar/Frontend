@@ -7,11 +7,10 @@ import ArticleDetails from '../../component/Article Detail';
 import { GetModulePosts } from '../../GraphQL/eduData';
 import Head from 'next/head';
 
-export default function Slug({ posts, relatedPosts  }) {
+export default function Slug({ posts, relatedPosts , params }) {
   
 const relatedPostswithout = relatedPosts.filter(post => !post.Media || post.Media.data.length === 0 )
 const relatedPostswit  = relatedPosts.filter(post => post.Media && post.Media.data.length > 0 )
-
 
 const router = useRouter();
 useEffect(() => {
@@ -22,7 +21,10 @@ useEffect(() => {
     }
   }
 }, [router.isReady, posts]);
-    
+
+console.log('router' ,router.query.slug)
+const currentUrl = `https://insightmedium.blog/Article/${router.query.slug}`;
+
   return (
     <div className=''>
       
@@ -45,8 +47,8 @@ useEffect(() => {
       
       {posts.map((post, index) => (
         <div key={index} className=''>
-          
-          <ArticleDetails post={post}/>
+
+          <ArticleDetails post={post } url={currentUrl}/>
         </div>
       ))}
 
@@ -59,8 +61,6 @@ useEffect(() => {
           </div>
         ))}
       </div>
-      
-      
     </div>
   );
 }

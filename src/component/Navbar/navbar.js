@@ -7,6 +7,7 @@ import Social from '../Sections/SocialMedia';
 import Image from "next/image";
 import Logo from '../../asset/logos.svg'
 import Logos from '../../asset/logo.svg'
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [logoSrc, setLogoSrc] = useState(Logo);
