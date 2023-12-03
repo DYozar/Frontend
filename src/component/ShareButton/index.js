@@ -32,7 +32,7 @@ const SocialShareButtons = ({ url }) => {
   };
 
   const shareOnPinterest = () => {
-    window.open(`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&description=${encodeURIComponent(shareText)}`, '_blank');
+    window.open(`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&title=${encodeURIComponent(shareText)}`, '_blank');
   };
 
   const shareOnLinkedIn = () => {
@@ -40,7 +40,7 @@ const SocialShareButtons = ({ url }) => {
   };
 
   const shareOnWhatsapp = () => {
-    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(`${shareText} ${url}`)}`, '_blank');
+    window.open(`https://api.whatsapp.com/send?text=${ encodeURIComponent(`${shareText} ${url}`) }`, '_blank');
   };
 const shareOnFlipboard = () => {
     // Open Flipboard website or app where users can manually add your URL to their magazine

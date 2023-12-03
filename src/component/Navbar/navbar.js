@@ -105,11 +105,11 @@ export default function Navbar() {
       {open && (
         <div className={`absolute top-0 w-full bg-slate-300 h-screen overflow-auto overscroll-auto flex-row justify-center items-center z-10`}>
           <div className={`lg:flex-row w-full  rounded p-5 flex max-sm:flex-col md:flex-col flex-row-reverse lg:justify-start max-md:flex-col lg:space-x-2 bg-white text-black `}>
-            <button onClick={closeMobileMenu} title="NavButton" type='submit'  aria-labelledby="labeldiv"  className="self-start max-md:self-end max-sm:order-1 md:self-end lg:order-2 lg:self-start max-sm:self-end">
+            <button   className="self-start max-md:self-end max-sm:order-1 md:self-end lg:order-2 lg:self-start max-sm:self-end">
               {open ? (
-                <CgClose className="stroke-1 text-xl text-black w-8 h-10" />
+                <CgClose className="stroke-1 text-xl text-black w-8 h-10"onClick={closeMobileMenu} title="NavButton" type='submit'  aria-labelledby="labeldiv" />
               ) : (
-                <CgMenuMotion className="stroke-1 text-xl w-8 h-10 c" />
+                <CgMenuMotion className="stroke-1 text-xl w-8 h-10 c"onClick={closeMobileMenu} title="NavButton" type='submit'  aria-labelledby="labeldiv" />
               )}
             </button>
             <div className="relative w-full  lg:order-first max-sm:order-2 max-sm:h-fit lg:h-full max-md:w-full items-start max-sm:w-full md:w-full">
