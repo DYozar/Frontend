@@ -48,7 +48,7 @@ const shareOnFlipboard = () => {
   };
   return (
     <div  className='text-[30px] flex items-center my-2 '>
-      {open ? <button  className='animate-pulse border-magenta-shade/90 text-magenta-shade/90 border-spacing-3 border-[1px] p-[1px] rounded-full ' onClick={ShareButton}><CgClose /></button> : <button  className= ' text-magenta-shade/90  border-magenta-shade/90 border-spacing-3 border-[1px] p-[1px]  rounded-full '  onClick={ShareButton}><CgShare/></button>}
+      {open ? <CgClose className='animate-pulse border-magenta-shade/90 text-magenta-shade/90 border-spacing-3 border-[1px] p-[1px] rounded-full ' onClick={ShareButton} /> : <CgShare className= ' text-magenta-shade/90  border-magenta-shade/90 border-spacing-3 border-[1px] p-[1px]  rounded-full '  onClick={ShareButton}/>}
 
       {open ? 
         (
