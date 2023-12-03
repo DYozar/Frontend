@@ -54,19 +54,19 @@ const shareOnFlipboard = () => {
         (
           <div className='text-[26px]  flex justify-start mx-5 space-x-3 w-[50%] '>
             <button onClick={shareOnFacebook}>
-              <FaMeta   className=' text-metaColor'/> 
+              <FaMeta   className=' text-metaColor  hover:text-gray-800'/> 
             </button>
             <button onClick={shareOnTwitter}>
-              <FaXTwitter  className=''/> 
+              <FaXTwitter  className='  hover:text-gray-800'/> 
             </button>
             <button onClick={shareOnPinterest}>
-              <FaPinterestP  className='bg-pincolor  text-white  rounded-full   p-[2px]'/>
+              <FaPinterestP  className='bg-pincolor  text-white  rounded-full   p-[2px]  hover:text-gray-800'/>
             </button>
             <button onClick={shareOnLinkedIn}>
-              <FaLinkedinIn  className=' bg-blue-600  text-white rounded-sm p-[1px] '/>
+              <FaLinkedinIn  className=' bg-blue-600  text-white rounded-sm p-[1px]   hover:text-gray-800'/>
             </button>
             <button onClick={shareOnWhatsapp}>
-              <FaWhatsapp  className='text-WhatsColor  '/>
+              <FaWhatsapp  className='text-WhatsColor    hover:text-gray-800'/>
             </button>
           </div>
         ) :null
