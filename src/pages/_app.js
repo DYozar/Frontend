@@ -11,7 +11,6 @@ import 'swiper/css/navigation';
 import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
-  console.log(SiteLogo)
   return (
     <> 
       {/* Insert the Google Tag Manager code here */}
