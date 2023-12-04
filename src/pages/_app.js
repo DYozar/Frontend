@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
+  console.log(SiteLogo)
   return (
     <> 
       {/* Insert the Google Tag Manager code here */}
@@ -39,7 +40,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content=" Navigate Success: Your Gateway to Market Mastery, Business Brilliance, and Global Economic Insights" />
         <meta property="og:description" content="Unlock the world of financial wisdom and business brilliance. Dive into market mastery, global economic stories, and insider insights. Stay empowered with our daily dose of savvy tips and curated stories. Explore the intersection of knowledge and success with our comprehensive media platform." />
-        <meta property="og:image" content="src/asset/sitelogo.png" />
+        <meta property="og:image" content="https://insightmedium.blog/_next/static/media/sitelogo.ae447203.png" />
         <meta property="og:image:secure_url" content={SiteLogo} />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="500"/>
@@ -47,7 +48,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="article" />
         <meta http-equiv="refresh" content="30"></meta>
         <meta name="keywords" content="financial markets, business strategies, global economy, market mastery, business brilliance, financial tips"/>
-        <link rel="icon" type="image/x-icon" href="public/favicon.ico"></link>
+        <link rel="icon" type="image/x-icon" href="public\favicon.ico"></link>
       </Head>
       <Layout>
         <Component {...pageProps} />
