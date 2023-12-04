@@ -47,8 +47,8 @@ const shareOnFlipboard = () => {
     window.open(`https://flipboard.com/edit?url=${encodeURIComponent(url)}`, '_blank');
   };
   return (
-    <div  className='text-[30px] flex items-center my-2 '>
-      {open ? <CgClose className='animate-pulse border-magenta-shade/90 text-magenta-shade/90 border-spacing-3 border-[1px] p-[1px] rounded-full ' onClick={ShareButton} /> : <CgShare className= ' text-magenta-shade/90  border-magenta-shade/90 border-spacing-3 border-[1px] p-[1px]  rounded-full '  onClick={ShareButton}/>}
+    <div  className='text-[30px] flex items-center my-2  cursor-pointer'>
+      {open ? <CgClose className='animate-pulse cursor-pointer border-magenta-shade/90 text-magenta-shade/90 border-spacing-3 border-[1px] p-[1px] rounded-full ' onClick={ShareButton} /> : <CgShare className= ' text-magenta-shade/90  cursor-pointer border-magenta-shade/90 border-spacing-3 border-[1px] p-[1px]  rounded-full '  onClick={ShareButton}/>}
 
       {open ? 
         (
