@@ -35,7 +35,7 @@ const currentUrl = `https://insightmedium.blog/Article/${router.query.slug}`;
         <meta name="author" content="InsightMedium"/>
         <meta property="og:type" content="website" />
         <meta property="og:title" content={posts[0].Title} />
-        <meta property="og:description" content={posts[0].Content} />
+        {/**<meta property="og:description" content={posts[0].Content} />*/}
         <meta property="og:image" content={posts[0].Media[0].url} />
         <meta property="og:image:secure_url" content={posts[0].Media[0].url} />
         <meta property="og:image:type" content="image/jpeg" />

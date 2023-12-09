@@ -36,8 +36,7 @@ const Index = () => {
 
   return (
     <div className='flex justify-center my-2 space-x-3'>
-      <h1 className=' '>Follow :</h1>
-      <div className='flex justify-center mt-1 space-x-3'>
+      <div className='flex justify-center mt-1 space-x-3  text-2xl'>
         {  socialMediaPlatforms.map((platform) => (
           <Link key={platform.title} href={getSocialMediaUrl(platform.title)}>
             {platform.icon}
