@@ -57,25 +57,25 @@ const Footer = () => {
 
           <ul className="mt-6 space-y-1">
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/legal/privacy-and-policy"> Privacy & Policy </a>
+              <Link className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/legal/privacy-and-policy"> Privacy & Policy </Link>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/legal/termsofservice">
+              <Link className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/legal/termsofservice">
                 term of condition
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/legal/Disclaimer">
+              <Link className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/legal/Disclaimer">
                 Disclaimer
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/legal/cookiespolicy">
+              <Link className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/legal/cookiespolicy">
                 Cookies Policy
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -85,15 +85,15 @@ const Footer = () => {
 
           <ul className="mt-6 space-y-1">
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/about/aboutus"> About Us </a>
+              <Link className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/about/aboutus"> About Us </Link>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/about/contentguidline"> Content Guidelines </a>
+              <Link className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/about/contentguidline"> Content Guidelines </Link>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/about/resources"> Resources </a>
+              <Link className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/about/resources"> Resources </Link>
             </li>
 
            
@@ -106,11 +106,11 @@ const Footer = () => {
 
           <ul className="mt-6 space-y-1">
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/support/faqs"> FAQs </a>
+              <Link className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/support/faqs"> FAQs </Link>
             </li>
 
             <li>
-              <a className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/support/contact"> Contact </a>
+              <Link className="text-gray-700 transition hover:text-gray-700/75" href="https://insightmedium.blog/support/contact"> Contact </Link>
             </li> 
           </ul>
         </div>
