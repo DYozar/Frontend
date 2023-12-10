@@ -30,6 +30,7 @@ export default function App({ Component, pageProps }) {
       {/* End Google Tag Manager code */}
       
       <Head>
+      <script async="async" data-cfasync="false" src="//thubanoa.com/1?z=6752508"></script>
         <meta name="p:domain_verify" content="71defa7e69311be4efaec119b7778f92"/>
         <meta name="p:domain_verify" content="71defa7e69311be4efaec119b7778f92"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
