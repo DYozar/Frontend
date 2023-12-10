@@ -39,6 +39,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content=" Navigate Success: Your Gateway to Market Mastery, Business Brilliance, and Global Economic Insights" />
         <meta property="og:description" content="Unlock the world of financial wisdom and business brilliance. Dive into market mastery, global economic stories, and insider insights. Stay empowered with our daily dose of savvy tips and curated stories. Explore the intersection of knowledge and success with our comprehensive media platform." />
+        <meta name="monetag" content="ddc6bf077a1ff47e19b29ac63f69617e"></meta>
         <meta property="og:image" content="https://insightmedium.blog/_next/static/media/sitelogo.ae447203.png" />
         <meta property="og:image:secure_url" content={SiteLogo} />
         <meta property="og:image:type" content="image/png" />
@@ -47,6 +48,8 @@ export default function App({ Component, pageProps }) {
         <meta property="og:type" content="article" />
         <meta name="keywords" content="Financial Markets, Stock Trading, Investment Strategies, Market Trends, Business Insights, Economic Forecast, Financial Analysis, Stock Market News, Entrepreneurship, Startup Success, Market Mastery, Trading Tips, Global Economy, Economic Trends, Market Dynamics, Financial News, Business Brilliance, Financial Growth, Wealth Management, Investment Portfolio, Financial Planning, Market Research, Business Development, Investment Opportunities, Economic Outlook, Market Intelligence, Financial Strategies, Business Innovation, Market Leadership, Investment Insights, Economic Impact, Market Expansion, Financial Wellness, Business Success, Market Analysis, Trading Trends, Economic Growth, Financial Literacy, Startup Growth, Market Performance, Investment Risks, Business Excellence, Financial Advice, Wealth Building, Market Opportunities, Economic Stability, Financial Markets Today, Business Trends, Investment Mastery, Market Volatility, Financial Management, Startup Tips, Economic Strategies, Market Challenges, Business Innovation, Financial Freedom, Wealth Creation, Investment Planning, Market Intelligence, Economic Insights, Financial Success, Business Leadership, Market Trends Today, Trading Insights, Economic News, Financial Wellness, Startup Strategies, Market Growth, Investment Advice, Economic Impact, Business Opportunities, Financial Growth Tips, Wealth Strategies, Market Analysis, Business Planning, Investment Trends, Economic Outlook, Financial Strategies, Business Development, Market Leadership, Investment Insights, Economic Impact, Market Expansion, Financial Wellness, Business Success, Market Analysis, Trading Trends, Economic Growth, Financial Literacy, Startup Growth, Market Performance, Investment Risks, Business Excellence, Financial Advice, Wealth Building, Market Opportunities, Economic Stability, Financial Markets Today, Business Trends, Investment Mastery" />
         <link rel="icon" type="image/x-icon" href="public\favicon.ico"></link>
+        <script type="text/javascript">var infolinks_pid = 3410828; var infolinks_wsid = 0;</script><script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+
       </Head>
       <Layout>
         <Component {...pageProps} />

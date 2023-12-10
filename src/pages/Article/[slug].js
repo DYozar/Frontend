@@ -42,6 +42,7 @@ const currentUrl = `https://insightmedium.blog/Article/${router.query.slug}`;
         <meta property="og:image:width" content="2240"/>
         <meta property="og:image:height" content="1260"/>
         <meta property="og:type" content="article" />
+        
       </Head>
 
 
