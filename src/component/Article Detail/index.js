@@ -91,7 +91,6 @@ export default function ArticleDetails({ post  , url}) {
           Introducing the future of convenience and style! Our cutting-edge products are designed with you in mind, seamlessly blending innovation and elegance to enhance your everyday life. Whether you're looking to upgrade your home, streamline your daily routine, or simply indulge in a touch of luxury, our range has something for everyone. Experience the perfect fusion of form and function as our products elevate your lifestyle. Join the countless satisfied customers who have already discovered the difference. Don't miss out on the opportunity to revolutionize the way you live. Embrace the future – choose us for unparalleled quality and sophistication. Your life, upgraded.
         </p>
       </div>*/}
-      <script type="text/javascript"> var infolinks_pid = 3410828; var infolinks_wsid = 0; </script> <script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
     </div>
   );
 }
